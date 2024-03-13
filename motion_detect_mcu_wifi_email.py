@@ -46,7 +46,7 @@ def sendEmail():
     sender_email = 'SENDER_EMAIL@gmail.com'
     sender_name = 'MCU email'
     sender_app_password = 'PASSWORD'
-    recipient_email ='RECEIVER_EMAIL@gmail.com'
+    recipient_email ='RECIPIENT_EMAIL@gmail.com'
     email_subject ='MCU Motion Detect'
     smtp.login(sender_email, sender_app_password)
     smtp.to(recipient_email)

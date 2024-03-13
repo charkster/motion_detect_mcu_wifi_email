@@ -39,7 +39,7 @@ def connect_to_wifi():
 
 def sendEmail():
     t = time.localtime()
-    date = str("{:2d}/{:2d}/{:4d} {:2d}:{:02d}:{:02d}".format(t[1],t[2],t[0],t[3],t[4],t[5]))
+    date_time_string = str("{:2d}/{:2d}/{:4d} {:2d}:{:02d}:{:02d}".format(t[1],t[2],t[0],t[3],t[4],t[5]))
     #initialize SMTP server and login
     smtp = umail.SMTP('smtp.gmail.com', 465, ssl=True)
     # Email details
@@ -53,7 +53,7 @@ def sendEmail():
     smtp.write("From:" + sender_name + "<"+ sender_email+">\n")
     smtp.write("Subject:" + email_subject + "\n")
     smtp.write("Motion detected\n")
-    smtp.write(date)
+    smtp.write(date_time_string)
     smtp.send()
     smtp.quit()
     wlan = network.WLAN(network.STA_IF) # redefine wlan for disconnect

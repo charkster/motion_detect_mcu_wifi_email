@@ -13,6 +13,8 @@ I rename the script "main.py" when I save it to the MCU (boot.py runs first, the
 
 The PIR sensor has GND connections for pins 1,2 and 3.3V for pin 3. The detect signal (alarm) is pin 4 and is active-high.
 
+Email message has timestamp from wifi NTP time.
+
 **Sample email notification:**
 
 ![picture](https://github.com/charkster/motion_detect_mcu_wifi_email/blob/main/motion_notification_email.png)
